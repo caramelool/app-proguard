@@ -23,6 +23,8 @@
 
 ################### Retrofit ###################
 
+-ignorewarnings
+
 # Retain generic type information for use by reflection by converters and adapters.
 -keepattributes Signature
 
