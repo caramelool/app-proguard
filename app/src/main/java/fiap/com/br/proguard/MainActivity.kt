@@ -3,6 +3,7 @@ package fiap.com.br.proguard
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -11,7 +12,9 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         SWRepository.getPeople(SWPeoples.DartVader) { people ->
-            Log.d("MainActivity", "Name: ${people?.name}")
+            val name = "Name: ${people?.name}"
+            textView.text = name
+            Log.d("MainActivity", name)
         }
     }
 }
